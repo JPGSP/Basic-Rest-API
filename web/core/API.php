@@ -27,7 +27,7 @@ class API
                 echo 'DELETE';
                 break;
             default:
-                echo 'NANAI';
+                echo 'NOT MORE METHODS SUPPORTED';
                 break;
         }
     }
