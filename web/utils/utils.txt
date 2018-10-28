@@ -1,0 +1,11 @@
+//CREATE TABLE
+CREATE TABLE people (
+    id int(10) PRIMARY KEY AUTO_INCREMENT,
+    name varchar(255) NOT NULL,
+    surname varchar(255),
+    age int
+);
+
+INSERT INTO people (id, name, surname, age) VALUES
+(1, 'Leandro', 'Gado', 32),
+(2, 'Edyta', 'Juszkiewicz', 32);
