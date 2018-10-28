@@ -1,9 +1,6 @@
 <?php
-/**
- * User: JPG
- * Date: 28/10/2018
- * Time: 14:19
- */
 
+require 'core/API.php';
 
-echo "Soy el index, xq he cambiado la configuracion";
+$my_api = new API();
+$my_api->run();
