@@ -1,0 +1,3 @@
+FROM mariadb:10.0
+
+MAINTAINER JPG
