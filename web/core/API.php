@@ -31,4 +31,18 @@ class API
                 break;
         }
     }
+
+    /**
+     * @param int    $code
+     * @param string $status
+     * @param string $message
+     */
+    public function response($code = 200, $status = '', $message = '') {
+        $http_response_header($code);
+
+        if(!empty($status) && !empty($message)) {
+            $response = array("status" => $status, $message=>$message);
+            echo json_encode($response, JSON_PRETTY_PRINT);
+        }
+    }
 }
