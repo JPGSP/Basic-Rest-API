@@ -7,5 +7,5 @@ CREATE TABLE people (
 );
 
 INSERT INTO people (id, name, surname, age) VALUES
-(1, 'Leandro', 'Gado', 32),
+(1, 'Joaquin', 'Pino', 32),
 (2, 'Edyta', 'Juszkiewicz', 32);
