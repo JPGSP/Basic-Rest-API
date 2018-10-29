@@ -1,21 +1,17 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: crowd2fund
- * Date: 28/10/2018
- * Time: 19:52
- */
+
+require 'Database.php';
 
 class API
 {
     public function run() {
-        header('Content-Type: application/JSON');
+        //header('Content-Type: application/JSON');
 
         $method = $_SERVER['REQUEST_METHOD'];
 
         switch ($method) {
             case 'GET':
-                echo 'GET';
+                $this->getPeople();
                 break;
             case 'POST':
                 echo 'POST';
@@ -30,6 +26,12 @@ class API
                 echo 'NOT MORE METHODS SUPPORTED';
                 break;
         }
+    }
+
+    public function getPeople() {
+        $db = new Database();
+        $resultado = $db->get('SELECT * FROM people');
+        var_dump($resultado);
     }
 
     /**

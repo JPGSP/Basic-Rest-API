@@ -29,7 +29,7 @@ class Database
     public function get($query):array {
         $databaseResult = $this->conn->query($query);
         while($resultToReturn[] = $databaseResult->fetch());
-        $databaseResult->close();
+        $databaseResult->closeCursor();
 
         return $resultToReturn;
     }
